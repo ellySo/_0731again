@@ -42,14 +42,20 @@
 // })
 
 $(document).ready(function(){
-    var navitag = '';
-    var navilength = navidata.length; // 대메뉴개수
+    var navitag = "";
 
-    for(var i =0; i < navilength; i++ ){ // 다중처리
-        navitag += "<li><a href='"+navidata[i].d1[0]+"'>"+navidata[i].d1[0]+"</a>
-        
-        navitag</li>"
+    for(var i in navidata){
+        navitag +="<li><a href='"+navidata[i].d1[1]+"'>'+navidata[i].d1[1]+'</a>"
+            for(var j in navidata[i].d2){
+             if(j == 0 ) navitag +="<ul>";
+             navitag +="<li><a href=''></a></li>";
+             if(j == navidata[i].d2.length - 1) navitag +="</ul>";
+            }
+
+        navitag +="</li>"
     }
+    
     $('#navi').html(navitag)
+    
 
 })
