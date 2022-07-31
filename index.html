@@ -7,6 +7,7 @@
     <title>제이쿼리 사용이유</title>
     <link rel="stylesheet" href="css/fonts.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/reset-css@5.0.1/reset.min.css">
+
     <link rel="stylesheet" href="css/navi.css">
     <script
   src="https://code.jquery.com/jquery-2.2.4.min.js"
@@ -15,14 +16,19 @@
     <script src="js/base.js"></script> 
 </head>
 <body>
-    <header id="hd">
-        <h1 class="logo">
-			<a href="/">포스코엠텍</a>
-		</h1>
-        <ul id="navi">
-            <!-- 자바스크립트로 네비 제작 -->
-           
-        </ul>
-    </header>
+    <!-- 부트스트랩 컴퍼넌트 / navbar-expand-md 햄버거버튼 출력 분기점-->
+    <nav class="navbar navbar-expand-md navbar-light bg-dark justify-content-between">
+        <!-- 로고 -->
+        <h1 class="logo mb-0"></h1><a class="navbar-brand" href="#">Navbar</a></h1>
+        <!-- 햄버거버튼 항상노출 d-block / 끝으로 자리배치 order-2 -->
+        <button class="navbar-toggler border-0 d-block order-2 bg-white rounded-circle" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse flex-grow-0" id="navbarNav">
+          <ul class="navbar-nav">
+
+          </ul>
+        </div>
+      </nav>
 </body>
 </html>
